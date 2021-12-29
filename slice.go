@@ -60,6 +60,11 @@ func main() {
 
 	iniSlice2 = append(iniSlice2, iniSlice...)
 	fmt.Println("iniSlice2", iniSlice2)
+	for i, v := range iniSlice2 {
+		fmt.Printf("index ke %v = %v\n", i, v)
+	}
+	fmt.Printf("%T\n", iniSlice2)
+
 	deleteSomeininiSlice2 := append(iniSlice2[:2], iniSlice2[4:]...)
 	fmt.Println("deleteSomeininiSlice2", deleteSomeininiSlice2)
 }

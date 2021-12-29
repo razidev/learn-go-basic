@@ -12,4 +12,11 @@ func main() {
 	fmt.Println(len(c))
 	fmt.Println(cap(c))
 	fmt.Println(c)
+
+	for i, v := range c {
+		fmt.Println("record: ", i)
+		for j, val := range v {
+			fmt.Printf("%v: %v\n", j, val)
+		}
+	}
 }
