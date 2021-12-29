@@ -11,7 +11,7 @@ func main() {
 		`syahputro`: []string{`Badminton`, `Ice cream`, `Sunsets`},
 	}
 
-	// fmt.Println(m)
+	m[`hiyah`] = []string{`cooking`, `diving`, `traveling`}
 
 	for k, v := range m {
 		fmt.Println("This is the record for", k)
