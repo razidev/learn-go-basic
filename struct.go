@@ -10,7 +10,7 @@ type job struct {
 type MySelf struct {
 	Name, Address string
 	Age           int
-	job
+	job           //embeded struct
 }
 
 //struct function
@@ -37,12 +37,12 @@ func main() {
 		},
 	}
 	fmt.Println("aziz:", aziz)
-	//tidak rekomendasi tidak menggunakan .job karna bisa redundan jika ada struct Position
+	//not recommended not using .job because it can be redundant if there are another Position field
 	fmt.Println("aziz position:", aziz.Position)
-	//rekomendasi
+	//recommended
 	fmt.Println("aziz salary:", aziz.job.Salary)
 
-	//tidak disarankan krn ketergantungan posisi
+	//not recommended because it depends on position
 	syahputro := MySelf{"Syahputro", "Jakarta", 23, job{"Cloud Developer", 20000}}
 	fmt.Println("syahputro:", syahputro)
 	fmt.Println("syahputro salary:", syahputro.Salary)
