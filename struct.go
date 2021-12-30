@@ -39,7 +39,7 @@ func main() {
 	fmt.Println("aziz:", aziz)
 	//tidak rekomendasi tidak menggunakan .job karna bisa redundan jika ada struct Position
 	fmt.Println("aziz position:", aziz.Position)
-
+	//rekomendasi
 	fmt.Println("aziz salary:", aziz.job.Salary)
 
 	//tidak disarankan krn ketergantungan posisi
