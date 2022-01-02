@@ -18,6 +18,12 @@ func (me MySelf) sayHi(name string) {
 	fmt.Println("Hello", name, "my name is", me.Name)
 }
 
+type person struct {
+	first      string
+	last       string
+	favFlavors []string
+}
+
 func main() {
 	var Me MySelf
 	Me.Name = "Razi"
@@ -47,4 +53,36 @@ func main() {
 	fmt.Println("syahputro:", syahputro)
 	fmt.Println("syahputro salary:", syahputro.Salary)
 	fmt.Println("syahputro position:", syahputro.job.Position)
+
+	p1 := person{
+		first: "Razi",
+		last:  "Syahputro",
+		favFlavors: []string{
+			"Hot",
+			"Coke",
+			"Chocolate",
+		},
+	}
+
+	p2 := person{
+		first: "Hiyah",
+		last:  "Iza",
+		favFlavors: []string{
+			"strawberry",
+			"vanilla",
+			"capuccino",
+		},
+	}
+
+	fmt.Println(p1.first)
+	fmt.Println(p1.last)
+	for i, v := range p1.favFlavors {
+		fmt.Println(i, v)
+	}
+
+	fmt.Println(p2.first)
+	fmt.Println(p2.last)
+	for i, v := range p2.favFlavors {
+		fmt.Println(i, v)
+	}
 }
