@@ -9,10 +9,10 @@ func main() {
 		books   map[int]string
 	}{
 		name:    "Razi",
-		hobbies: []string{"Bandminto", "Games"},
+		hobbies: []string{"Badminton", "Games"},
 		books: map[int]string{
 			1: "Atomic Habits",
-			2: "the intelligent investor",
+			2: "The Intelligent Investor",
 			3: "Supernova",
 		},
 	}
