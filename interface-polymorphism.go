@@ -37,7 +37,16 @@ func main() {
 		},
 		isMarried: false,
 	}
+	otherPeople := marriage{
+		person: person{
+			first: "dolor",
+			last:  "sit amet",
+		},
+		isMarried: true,
+	}
 
 	people.speak()
 	bar(people)
+	otherPeople.speak()
+	bar(otherPeople)
 }
