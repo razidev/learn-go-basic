@@ -27,6 +27,7 @@ func main() {
 	switch {
 	case length > 10:
 		fmt.Println(name, "kepanjangan")
+		fallthrough
 	case length > 6:
 		fmt.Println(name, "panjang")
 	default:
