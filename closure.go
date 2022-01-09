@@ -5,6 +5,8 @@ import "fmt"
 var num int
 
 func main() {
+	//be careful using closure, it can change the value of variable
+
 	name := "Razi"
 	counter := 0
 
@@ -47,5 +49,3 @@ func incrementor() func() int {
 		return y
 	}
 }
-
-//hati-hati menggunakan closure bisa merubah value yg sudah ada
