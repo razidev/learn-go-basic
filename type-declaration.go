@@ -13,5 +13,4 @@ func main() {
 	fmt.Println(marriage)
 }
 
-// type declaration digunakan untuk menginisialisasi
-// type data dengan nama yg diinginkan
+// type declaration uses for initialize with the name you want
