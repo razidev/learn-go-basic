@@ -18,7 +18,7 @@ func (me MySelf) sayHi(name string) {
 	fmt.Println("Hello", name, "my name is", me.Name)
 }
 
-type person struct {
+type People struct {
 	first      string
 	last       string
 	favFlavors []string
@@ -54,7 +54,7 @@ func main() {
 	fmt.Println("syahputro salary:", syahputro.Salary)
 	fmt.Println("syahputro position:", syahputro.job.Position)
 
-	p1 := person{
+	p1 := People{
 		first: "Razi",
 		last:  "Syahputro",
 		favFlavors: []string{
@@ -64,7 +64,7 @@ func main() {
 		},
 	}
 
-	p2 := person{
+	p2 := People{
 		first: "Hiyah",
 		last:  "Iza",
 		favFlavors: []string{
