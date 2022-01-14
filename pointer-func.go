@@ -6,7 +6,7 @@ type Address struct {
 	City, Province, Country string
 }
 
-// func ChangeCounteryToIndonesia(address Address) { tidak akan berubah country-nya
+// func ChangeCounteryToIndonesia(address Address) { it won't change the country
 func ChangeCounteryToIndonesia(address *Address) {
 	address.Country = "Indonesia"
 }
@@ -18,7 +18,7 @@ func main() {
 		Country:  "",
 	}
 
-	// ChangeCounteryToIndonesia(alamat) tidak akan berubah country-nya
+	// ChangeCounteryToIndonesia(alamat) it won't change the country
 	ChangeCounteryToIndonesia(&alamat)
 	fmt.Print(alamat)
 }
