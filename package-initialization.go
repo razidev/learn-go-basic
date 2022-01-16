@@ -1,11 +1,10 @@
 package main
 
 import (
-	"Udemy-PZN/database"
-	"fmt"
+	_ "Udemy-PZN/database"
 )
 
 func main() {
-	result := database.GetDatabase()
-	fmt.Println(result)
+	// result := database.GetDatabase()
+	// fmt.Println(result)
 }
