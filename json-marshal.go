@@ -7,9 +7,9 @@ import (
 
 func main() {
 	p1 := struct {
-		Name    string
-		Hobbies []string
-		Books   map[int]string
+		Name    string         `json:"name"`
+		Hobbies []string       `json:"hobbies"`
+		Books   map[int]string `json:"books"`
 	}{
 		Name:    "Razi",
 		Hobbies: []string{"Badminton", "Games"},
