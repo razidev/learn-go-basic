@@ -8,7 +8,7 @@ import (
 type Person struct {
 	Name      string         `json:"name"`
 	Hobbies   []string       `json:"hobbies"`
-	Books     map[int]string `json:"books"`
+	Books     map[int]string `json:"books"` //for unpredictable the key's objects
 	Addresses []Address      `json:"address"`
 }
 
