@@ -25,6 +25,14 @@ func (value userSlice) Swap(i, j int) {
 }
 
 func main() {
+	i := []int{5, 2, 6, 3, 1, 4} // unsorted number
+	sort.Ints(i)
+	fmt.Println(i)
+
+	s := []string{"Go", "Bravo", "Gopher", "Alpha", "Grin", "Delta"} // unsorted string
+	sort.Strings(s)
+	fmt.Println(s)
+
 	users := []User{
 		{"Leonardo da Vinci", 25},
 		{"Michelangelo", 30},
