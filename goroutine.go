@@ -5,12 +5,24 @@ import (
 	"time"
 )
 
-func showHelloWolrd() {
+func showsHelloWolrd() {
 	fmt.Println("Hello World")
 }
 
+func showsNumber(number int) {
+	fmt.Println("Number of", number)
+}
+
+func moreGoroutine() {
+	for i := 0; i < 100000; i++ {
+		go showsNumber(i)
+	}
+}
+
 func main() {
-	go showHelloWolrd()
+	go showsHelloWolrd()
 	fmt.Println("shows here")
-	time.Sleep(1 * time.Second)
+	moreGoroutine()
+	time.Sleep(5 * time.Second)
+
 }
