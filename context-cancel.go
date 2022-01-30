@@ -1,31 +1,12 @@
 package main
 
 import (
+	"Udemy-PZN/helper"
 	"context"
 	"fmt"
 	"runtime"
 	"time"
 )
-
-func CreateCounter(ctx context.Context) chan int {
-	destination := make(chan int)
-
-	go func() {
-		defer close(destination)
-		counter := 1
-		for {
-			select {
-			case <-ctx.Done():
-				return
-			default:
-				destination <- counter
-				counter++
-				time.Sleep(1 * time.Second)
-			}
-		}
-	}()
-	return destination
-}
 
 func main() {
 	fmt.Println("total goroutine", runtime.NumGoroutine())
@@ -33,7 +14,7 @@ func main() {
 	parent := context.Background()
 	ctx, cancel := context.WithCancel(parent)
 
-	destination := CreateCounter(ctx)
+	destination := helper.CreateCounter(ctx)
 
 	fmt.Println("total goroutine", runtime.NumGoroutine())
 
