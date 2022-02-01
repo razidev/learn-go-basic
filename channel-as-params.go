@@ -10,7 +10,7 @@ func main() {
 	channel := make(chan string)
 	defer close(channel)
 
-	go helper.GiveMeResponse(channel)
+	go helper.GiveMeResponse(channel, "Hulk")
 
 	data := <-channel
 	fmt.Println("data:", data)
