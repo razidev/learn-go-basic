@@ -2,11 +2,9 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func sendChan(channel chan<- string) {
-	time.Sleep(2 * time.Second)
 	channel <- "Michelangelo"
 }
 
@@ -20,7 +18,7 @@ func main() {
 	defer close(channel)
 
 	go sendChan(channel)
-	go receiveChan(channel)
+	receiveChan(channel)
 
-	time.Sleep(5 * time.Second)
+	fmt.Println("About to exit")
 }
