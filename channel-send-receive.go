@@ -4,21 +4,41 @@ import (
 	"fmt"
 )
 
-func sendChan(channel chan<- string) {
-	channel <- "Michelangelo"
-}
-
-func receiveChan(channel <-chan string) {
-	data := <-channel
-	fmt.Println("receiver:", data)
-}
-
 func main() {
-	channel := make(chan string)
-	defer close(channel)
+	even := make(chan int)
+	odd := make(chan int)
+	quit := make(chan bool)
 
-	go sendChan(channel)
-	receiveChan(channel)
+	go send(even, odd, quit)
 
-	fmt.Println("About to exit")
+	receive(even, odd, quit)
+
+	fmt.Println("about to exit")
+}
+
+// send channel
+func send(even, odd chan<- int, quit chan<- bool) {
+	for i := 0; i < 10; i++ {
+		if i%2 == 0 {
+			even <- i
+		} else {
+			odd <- i
+		}
+	}
+	close(quit)
+}
+
+// receive channel
+func receive(even, odd <-chan int, quit <-chan bool) {
+	for {
+		select {
+		case v := <-even:
+			fmt.Println("the value received from the even channel:", v)
+		case v := <-odd:
+			fmt.Println("the value received from the odd channel:", v)
+		case i, ok := <-quit:
+			fmt.Println("from comma ok", i, ok)
+			return
+		}
+	}
 }
