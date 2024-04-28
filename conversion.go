@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var nilai32 int32 = 128
+	var nilai32 int32 = 129
 	var nilai64 int64 = int64(nilai32)
 	var nilai8 int8 = int8(nilai32) //not enough space for int8 bcs the range from -128 to 127
 
