@@ -3,25 +3,27 @@ package main
 import "fmt"
 
 func main() {
+
+	//ini array
 	var month = [...]string{
-		"Januari",
-		"Februari",
-		"Maret",
-		"April",
-		"Mei",
-		"Juni",
-		"Juli",
-		"Agustus",
-		"September",
-		"Oktober",
-		"November",
-		"Desember",
+		"Januari",   // 0
+		"Februari",  // 1
+		"Maret",     // 2
+		"April",     // 3
+		"Mei",       // 4
+		"Juni",      // 5
+		"Juli",      // 6
+		"Agustus",   // 7
+		"September", // 8
+		"Oktober",   // 9
+		"November",  // 10
+		"Desember",  // 11
 	}
 
 	var slice1 = month[4:7]
 	fmt.Println("slice1", slice1)
-	// fmt.Println(len(slice1))
-	// fmt.Println(cap(slice1))
+	fmt.Println("slice1-len", len(slice1))
+	fmt.Println("slice1-cap", cap(slice1))
 
 	// month[5] = "ubah"
 	// fmt.Println(slice1)
@@ -36,15 +38,17 @@ func main() {
 	fmt.Println("slice3", slice3)
 	slice3[1] = "ubah-december"
 	fmt.Println("ubah slice3", slice3)
-	fmt.Println(slice2)
-	fmt.Println(month)
+	fmt.Println("slice2", slice2)
+	fmt.Println("month", month)
 
 	newSlice := make([]string, 2, 5)
 	newSlice[0] = "razi"
 	newSlice[1] = "hiyah"
+	// newSlice[2] = "aziz" : akan error, harus gunakan append
+	newSlice = append(newSlice, "aziz")
 	fmt.Println("newSlice:", newSlice)
-	fmt.Println(len(newSlice))
-	fmt.Println(cap(newSlice))
+	fmt.Println("newSlice-len:", len(newSlice))
+	fmt.Println("newSlice-cap:", cap(newSlice))
 
 	copySlice := make([]string, len(newSlice), cap(newSlice))
 	copy(copySlice, newSlice)
