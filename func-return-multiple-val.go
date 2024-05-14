@@ -9,17 +9,16 @@ func getFullName() (string, string, string) {
 func getFullName2() (firstName, middleName, lastName string) {
 	firstName = "nurul"
 	middleName = "iza"
-	lastName = "hiyah"
 
 	return
 }
 
 func main() {
 	firstName, _, lastName := getFullName()
-	fmt.Println(firstName)
-	fmt.Println((lastName))
+	fmt.Println("firstName", firstName)
+	fmt.Println("lastName", lastName)
 
 	a, _, c := getFullName2()
-	fmt.Println(a)
-	fmt.Println(c)
+	fmt.Println("a", a)
+	fmt.Println("c", c)
 }
