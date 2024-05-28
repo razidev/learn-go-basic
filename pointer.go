@@ -15,12 +15,12 @@ func main() {
 	// address3 = &Address{"Jakarta", "DKI Jakarta", "Indonesia"} //create new memory for address3
 	*address3 = Address{"Jakarta", "DKI Jakarta", "Indonesia"} //create new same memory for address3 & address2
 
-	fmt.Println(address1)
-	fmt.Println(address2)
-	fmt.Println(address3)
+	fmt.Println("address1", address1)
+	fmt.Println("address2", address2)
+	fmt.Println("address3", address3)
 
 	//create a empty pointer
 	var address4 *Address = new(Address)
 	address4.Province = "DIY Jogjajakarta"
-	fmt.Println(address4)
+	fmt.Println("address4", address4)
 }
