@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Udemy-PZN/helper"
 	"fmt"
+	helper "learn-go-basic/helper"
 )
 
 func main() {

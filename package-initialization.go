@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "Udemy-PZN/database"
+	_ "learn-go-basic/database"
 )
 
 func main() {
