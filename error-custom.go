@@ -23,7 +23,7 @@ func SaveData(id string, data any) error {
 		return &validationError{"validation error"}
 	}
 
-	if id != "eko" {
+	if id != "razi" {
 		return &notFoundError{"data not found"}
 	}
 
@@ -31,7 +31,7 @@ func SaveData(id string, data any) error {
 }
 
 func main() {
-	err := SaveData("eko", nil)
+	err := SaveData("razi", nil)
 	if err != nil {
 		// terjadi error
 		//if validationErr, ok := err.(*validationError); ok {
